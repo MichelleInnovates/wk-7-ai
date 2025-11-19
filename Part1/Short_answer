@@ -1,0 +1,40 @@
+Part 1: Theoretical Understanding (30%)
+
+1. Short Answer Questions
+
+Q1: Define algorithmic bias and provide two examples of how it manifests in AI systems.
+Definition: Algorithmic bias refers to systematic and repeatable errors in a computer system that create unfair outcomes, such as privileging one arbitrary group of users over others. This often stems from biased training data, flawed model assumptions, or lack of diversity in the development team.
+
+Examples:
+
+Healthcare Allocation: An algorithm used to allocate healthcare resources used "past healthcare costs" as a proxy for "health needs." Because Black patients historically had less access to care (and thus lower costs) due to systemic inequality, the AI falsely concluded they were healthier than equally sick White patients, denying them necessary extra care.
+
+Mortgage Lending: Loan approval algorithms trained on historical housing data may deny loans to applicants from specific zip codes (redlining). Since these zip codes correlate with racial demographics, the model perpetuates racial bias even if "race" is not an explicit input variable.
+
+Q2: Explain the difference between transparency and explainability in AI. Why are both important?
+
+Transparency refers to the openness regarding the AI system's existence, its data sources, and its development process. It answers what the system is and how it was built.
+
+Explainability (XAI) refers to the ability to describe the internal logic of a model in human-understandable terms. It answers why a specific decision was made for a specific input.
+
+Importance: Transparency builds societal trust and accountability (ensuring we know who is responsible). Explainability is crucial for recourse; if a user is denied a loan, they need to know why so they can contest the decision or improve their standing.
+
+Q3: How does GDPR (General Data Protection Regulation) impact AI development in the EU?
+The GDPR imposes strict constraints on AI training and deployment:
+
+Right to Explanation (Recital 71): Users significantly affected by automated decision-making have the right to obtain an explanation of the decision reached.
+
+Data Minimization: AI developers must collect only the data necessary for the specific purpose, preventing the hoarding of data for "future unknown uses."
+
+Consent: Explicit user consent is required to process personal data, making it harder to scrape the web indiscriminately for training data.
+
+2. Ethical Principles Matching
+
+Non-maleficence (B): Ensuring AI does not harm individuals or society.
+
+Autonomy (C): Respecting users’ right to control their data and decisions.
+
+Sustainability (D): Designing AI to be environmentally friendly.
+
+Justice (A): Fair distribution of AI benefits and risks.
+

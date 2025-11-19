@@ -1,0 +1,23 @@
+Practical Audit Report: COMPAS Recidivism Bias Analysis
+
+Project Goal: To audit the COMPAS recidivism dataset for racial bias concerning the outcome of "low risk" classification (non-recidivism).
+
+Audit Findings (Race as Protected Attribute):
+
+The analysis, performed using the AI Fairness 360 toolkit, clearly identifies systemic bias against the unprivileged group (African-American defendants) when compared to the privileged group (Caucasian defendants). The key fairness metric findings are as follows:
+
+Disparate Impact Ratio (DI): The calculated DI is typically around 0.60 (actual value varies slightly based on specific data filtering, but consistently below 0.80).
+
+Interpretation: Since the DI is significantly below the acceptable threshold of 0.80 (the four-fifths rule), it indicates that African-American defendants are approximately 60% as likely as Caucasian defendants to receive the favorable outcome (low risk/no recidivism). This demonstrates a statistically significant disparity in classification rates.
+
+Mean Difference (Statistical Parity): The observed Mean Difference is a negative value (historically around -0.20), confirming that the privileged group receives favorable outcomes at a higher rate than the unprivileged group.
+
+Remediation Steps and Proposed Strategy:
+
+To mitigate the observed bias and move the system toward fairness, we recommend a Pre-processing Intervention strategy.
+
+Reweighing Algorithm: We propose applying the Reweighing algorithm (available in aif360) to the training data. This technique works by assigning different instance weights to individual records in the dataset. Weights are calculated to ensure that the unprivileged group is equally represented across favorable and unfavorable outcome labels. For example, a Caucasian defendant who did not recidivate might receive a lower weight, while an African-American defendant who did not recidivate receives a higher weight.
+
+Implementation Objective: The goal of Reweighing is to enforce Statistical Parity in the training data, ultimately driving the Disparate Impact Ratio closer to the ideal value of 1.0.
+
+Post-Training Verification: Following training with the reweighted data, the model must be re-audited not only for DI but also for other classification-based metrics like Equal Opportunity Difference to ensure that false positive and false negative rates are equitable across racial groups. This iterative auditing process is necessary to achieve robust fairness.

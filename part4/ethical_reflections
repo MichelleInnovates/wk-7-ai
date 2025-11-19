@@ -1,0 +1,25 @@
+Part 4: Ethical Reflection (5%)
+
+Prompt: Reflect on a personal project (past or future). How will you ensure it adheres to ethical AI principles?
+
+Project Context: Predicting Student Dropout Rates
+
+In a past academic project, my group designed a machine learning model intended to flag university students who were at a high risk of dropping out so that counselors could offer timely intervention.
+
+Ethical Analysis and Adherence to Principles:
+
+Non-maleficence & Justice (Avoiding Harm and Bias):
+
+Original Risk: The model heavily relied on socio-economic indicators like "zip code" and "financial aid status" as input features. While predictive, this risked creating systemic bias, disproportionately classifying high-performing, low-income students as "high risk" (false positives) compared to their high-income peers. This could lead to the stigmatization of students who needed support the least, violating the principle of Justice.
+
+Future Solution: I would explicitly integrate fairness constraints, such as using the Equalized Odds metric, during model training. This metric ensures that the model’s error rates (specifically, the false positive rate for "high risk") are equalized across the privileged (high-income) and unprivileged (low-income) groups.
+
+Autonomy & Transparency:
+
+Original Risk: If the model simply sent an alert to a counselor without context, the student would lose autonomy over their data and feel targeted.
+
+Future Solution: Intervention would adhere to Transparency by requiring that any contact with the student include an explicit, human-readable reason for the concern (e.g., "We noticed you missed three required lab sessions," not "The AI flagged you as high risk"). This respects the student's Autonomy by giving them control over the interaction and the chance to explain or correct the situation.
+
+Beneficence (Designing for Good):
+
+Future Solution: Before deploying the model, I would conduct qualitative research (interviews) with both current students and university counselors to define what "helpful intervention" looks like. The AI's output would be designed based on this feedback, ensuring the system genuinely maximizes positive outcomes (Beneficence) rather than just maximizing prediction accuracy.

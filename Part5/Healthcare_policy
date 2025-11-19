@@ -1,0 +1,43 @@
+Policy Proposal: Ethical Guidelines for AI Deployment in Healthcare
+
+To: PLP Academy Community & Healthcare Stakeholders
+From: [Your Group Name]
+Subject: Framework for Responsible AI Integration in Patient Care
+
+1. Executive Summary
+
+Artificial Intelligence holds immense potential to revolutionize diagnostics and personalized medicine. However, without strict ethical guardrails, it risks amplifying existing health disparities and eroding the patient-doctor trust. This policy outlines three pillars for deployment: Dynamic Consent, Bias Mitigation, and Clinical Explainability.
+
+2. Patient Consent Protocols
+
+Traditional "blanket consent" is insufficient for AI systems that may evolve over time.
+
+Dynamic Consent Models: Patients must be able to opt-in or opt-out of having their data used for AI training at granular levels (e.g., consenting to diagnostic use but not third-party research).
+
+Data Usage Transparency: Patients must be explicitly informed if an algorithm is assisting in their diagnosis. The notification should state: "An AI tool analyzed your X-ray to assist the radiologist."
+
+Right to Human Review: Every AI-driven diagnosis or treatment plan must have a "human-in-the-loop" mechanism where a patient can request a review by a senior specialist without AI assistance.
+
+3. Bias Mitigation Strategies
+
+Healthcare AI often fails marginalized groups due to unrepresentative training data (e.g., skin cancer detection tools failing on darker skin tones).
+
+Representative Sampling Mandate: Before clinical trial deployment, developers must prove their training data reflects the demographic diversity (Race, Gender, Age, Socioeconomic Status) of the patient population it serves.
+
+Routine Algorithmic Audits: Hospitals must perform quarterly audits using fairness metrics (e.g., Equal Opportunity Difference) to check if the AI is generating higher false-negative rates for specific demographic groups.
+
+Federated Learning: Encourage the use of Federated Learning to train models across different hospitals without sharing raw patient data, ensuring models learn from diverse geographic and demographic pools.
+
+4. Transparency & Explainability Requirements
+
+"Black box" algorithms are unacceptable in life-critical scenarios.
+
+Interpretability Reports: AI tools must provide "saliency maps" or feature importance lists explaining why a diagnosis was suggested (e.g., highlighting the specific pixel region on an MRI).
+
+Confidence Scores: Every AI prediction must be accompanied by a confidence score (e.g., "92% probability of pneumonia"). Predictions below a certain threshold (e.g., 75%) must automatically default to manual physician review.
+
+Model Cards: All deployed AI systems must publish a "Model Card" detailing the model's intended use, limitations, and the specific populations on which it was tested.
+
+5. Conclusion
+
+The integration of AI in healthcare is not merely a technological upgrade but an ethical responsibility. By adhering to these guidelines, we ensure that technology serves as an equalizer of health outcomes rather than a magnifier of inequality.

@@ -1,0 +1,40 @@
+Part 2: Case Study Analysis (40%)
+
+Case 1: Biased Hiring Tool (Amazon Scenario)
+
+1. Source of Bias
+The primary source was Historical Data Bias. The model was trained on resumes submitted to the company over a 10-year period. Since the tech industry has historically been male-dominated, the training data contained a vast majority of male resumes. The AI learned to penalize keywords associated with women (e.g., "women’s chess club") and prioritize language commonly found in male resumes (e.g., "executed," "captured"). This led to an indirect bias where the model associated successful past performance (based on the male-dominated historical sample) with masculine language, thereby downgrading female candidates regardless of qualifications.
+
+2. Proposed Fixes
+
+Data Balancing & Augmentation (Pre-processing): Re-sample the training data to ensure an equal representation of male and female resumes, or generate synthetic minority class data to balance the inputs. This directly addresses the input imbalance.
+
+Blind Screening & Feature De-biasing (In-processing): Programmatically remove gendered identifiers (names, pronouns, gender-specific college organizations) from the text before it is fed into the model. This attempts to enforce fairness through "unawareness."
+
+Regular Audits & "Human-in-the-Loop" (Monitoring): Implement a rule where the AI only ranks candidates but does not reject them. A human recruiter must review a statistically significant percentage of "low-ranked" diverse candidates to identify and retrain the model on false negatives.
+
+3. Evaluation Metrics
+
+Disparate Impact Ratio (DIR): Compares the selection rate of female candidates vs. male candidates (e.g., selection rate for female candidates / selection rate for male candidates). A fair outcome requires a ratio between 0.8 and 1.25 (the "four-fifths rule").
+
+Demographic Parity: Ensures that the proportion of applicants selected is the same across protected groups (e.g., ensuring 50% of hires for a qualified pool are female).
+
+Case 2: Facial Recognition in Policing (FRT)
+
+1. Ethical Risks
+
+Wrongful Arrests/Incarceration: Studies (like those by the NIST) have consistently shown that FRT systems exhibit higher false-positive rates for individuals with darker skin tones and women. This statistically higher error rate for minorities increases the probability of innocent individuals being falsely identified, detained, or arrested.
+
+Chilling Effects on Civil Liberties: The constant or potential presence of surveillance can discourage free speech, peaceful protest, and assembly, as citizens fear being tracked and identified (especially for political organizing).
+
+Privacy and Autonomy Violations: Scanning faces in public spaces without explicit consent violates the right to anonymity, transforming public life into a space of continuous, non-consensual identity checks.
+
+2. Policy Recommendations for Responsible Deployment
+
+Moratorium on Real-Time Surveillance: Ban the use of real-time facial recognition in public spaces entirely until accuracy disparities are resolved and comprehensive regulatory frameworks are established. This prevents immediate, irreversible harm.
+
+Accuracy and Equity Thresholds: Require any deployed system to pass independent testing (e.g., based on NIST standards) with a high accuracy rate (e.g., >99%) across all demographic groups. If the error rate disparity between the most and least accurately identified groups exceeds a defined threshold (e.g., 5 percentage points), deployment is prohibited.
+
+Warrant Requirements and Scope Limits: Police should only be allowed to run retrospective facial recognition searches (on past footage) with a judicial warrant for investigating serious violent felonies only. The use of FRT for petty crimes, or running searches against unverified social media photos, must be explicitly outlawed.
+
+mkdi
